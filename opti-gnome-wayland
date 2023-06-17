@@ -10,7 +10,7 @@ echo " ██   ███ ██ ██  ██ ██    ██ ██ ██�
 echo " ██    ██ ██  ██ ██ ██    ██ ██  ██  ██ ██      "
 echo "  ██████  ██   ████  ██████  ██      ██ ███████ "                                                                                            
 echo "#################################################################"
-echo "build-latest: 0.0.1"
+echo "build-latest: 0.0.2"
 echo "opti-gnome-wayland-github: https://github.com/manoel-linux/opti-gnome-wayland"
 echo "#################################################################"
 echo "$(date)"
@@ -28,9 +28,38 @@ sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
 
 directors="/etc/xdg/autostart/"
 
-keep_the_files="org.gnome.SettingsDaemon.XSettings.desktop"
+keep_the_files=(
+    "org.gnome.SettingsDaemon.XSettings.desktop"
+    "org.gnome.SettingsDaemon.A11ySettings.desktop"
+    "org.gnome.SettingsDaemon.Color.desktop"
+    "org.gnome.SettingsDaemon.Datetime.desktop"
+    "org.gnome.SettingsDaemon.Housekeeping.desktop"
+    "org.gnome.SettingsDaemon.Keyboard.desktop"
+    "org.gnome.SettingsDaemon.MediaKeys.desktop"
+    "org.gnome.SettingsDaemon.Power.desktop"
+    "org.gnome.SettingsDaemon.PrintNotifications.desktop"
+    "org.gnome.SettingsDaemon.Rfkill.desktop"
+    "org.gnome.SettingsDaemon.ScreensaverProxy.desktop"
+    "org.gnome.SettingsDaemon.Sharing.desktop"
+    "org.gnome.SettingsDaemon.Smartcard.desktop"
+    "org.gnome.SettingsDaemon.Sound.desktop"
+    "org.gnome.SettingsDaemon.UsbProtection.desktop"
+    "org.gnome.SettingsDaemon.Wacom.desktop"
+    "org.gnome.SettingsDaemon.Wwan.desktop"
+)
 
-find "$directors" ! -name "$keep_the_files" -type f -delete
+for files in $directors*; do
+    if [[ ! " ${keep_the_files[@]} " =~ " ${files##*/} " ]]; then
+        rm $files
+    fi
+done
 
+echo "maintained file"
+echo "#################################################################"  
+for files in "${keep_the_files[@]}"
+do
+    echo "$files"
+done
+echo "#################################################################"  
 echo "DONE! Optimized GNOME Boot: Restart the Machine and Monitor RAM Usage"
 echo "#################################################################"
