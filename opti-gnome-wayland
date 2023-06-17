@@ -71,5 +71,17 @@ do
     echo "$files"
 done
 echo "#################################################################"  
-echo "DONE! Optimized GNOME: Restart the Machine and Monitor RAM Usage"
+echo "DONE! Optimized GNOME"
+echo "#################################################################"  
+read -p "To apply the changes, you need to restart system. (y/n): " confirm
+
+if [[ "$confirm" == "y" || "$confirm" == "Y" ]]; then
 echo "#################################################################"
+echo "Restarting the system..."    
+echo "#################################################################"
+sudo reboot
+else
+echo "#################################################################"
+echo "Restart canceled."
+echo "#################################################################"
+fi
