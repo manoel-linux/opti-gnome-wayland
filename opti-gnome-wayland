@@ -5,6 +5,13 @@ echo "This script can only be executed in a Wayland environment."
 exit 1
 fi
 
+if ! command -v dbus-daemon &> /dev/null; then
+echo "ERROR: This script requires DBus to be executed."
+echo "Make sure you have DBus installed on your system."
+echo "DBus is required for inter-process communication."
+exit 1
+fi
+
 clear
 echo "#################################################################"
 echo "opti-gnome-wayland-installer: june 2023"
