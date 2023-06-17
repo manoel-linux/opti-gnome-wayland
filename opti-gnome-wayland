@@ -6,9 +6,11 @@ exit 1
 fi
 
 if ! command -v dbus-daemon &> /dev/null; then
+echo "#################################################################"
 echo "ERROR: This script requires DBus to be executed."
 echo "Make sure you have DBus installed on your system."
 echo "DBus is required for inter-process communication."
+echo "#################################################################"
 exit 1
 fi
 
