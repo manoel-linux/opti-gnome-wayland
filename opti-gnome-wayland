@@ -17,19 +17,9 @@ echo "$(date)"
 echo "Linux $(uname -r)"
 echo "#################################################################"
 
-
-if [[ $EUID -ne 0 ]]; then
-echo "ERROR! sudo needed" 
-echo "#################################################################"   
-exit 1
-fi
-
 gsettings set org.gnome.desktop.interface enable-animations false
-
 gsettings set org.gnome.desktop.background show-desktop-icons false
-
 gsettings set org.gnome.desktop.thumbnailers disable-all true
-
 gsettings set org.gnome.shell disable-user-extensions true
 
 sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
@@ -58,7 +48,7 @@ keep_the_files=(
 
 for files in $directors*; do
     if [[ ! " ${keep_the_files[@]} " =~ " ${files##*/} " ]]; then
-        rm $files
+        sudo rm $files
     fi
 done
 
