@@ -1,0 +1,36 @@
+#!/bin/bash
+
+clear
+echo "#################################################################"
+echo "opti-gnome-wayland-installer: june 2023"
+echo "#################################################################"
+echo "  ██████  ███    ██  ██████  ███    ███ ███████ "
+echo " ██       ████   ██ ██    ██ ████  ████ ██      "
+echo " ██   ███ ██ ██  ██ ██    ██ ██ ████ ██ █████   "
+echo " ██    ██ ██  ██ ██ ██    ██ ██  ██  ██ ██      "
+echo "  ██████  ██   ████  ██████  ██      ██ ███████ "                                                                                            
+echo "#################################################################"
+echo "build-latest: 0.0.1"
+echo "opti-gnome-wayland-github: https://github.com/none/none/none"
+echo "#################################################################"
+echo "$(date)"
+echo "Linux $(uname -r)"
+echo "#################################################################"
+
+
+if [[ $EUID -ne 0 ]]; then
+echo "ERROR! sudo needed" 
+echo "#################################################################"   
+exit 1
+fi
+
+sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
+
+directors="/etc/xdg/autostart/"
+
+keep_the_files="org.gnome.SettingsDaemon.XSettings.desktop"
+
+find "$directors" ! -name "$keep_the_files" -type f -delete
+
+echo "DONE! Optimized GNOME Boot: Restart the Machine and Monitor RAM Usage"
+echo "#################################################################"
