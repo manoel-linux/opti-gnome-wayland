@@ -2,6 +2,8 @@
 
 - Use at your own risk
 
+- It only works on Wayland
+
 - opti-gnome-wayland: june 2023
 
 - build-latest: 0.0.3
