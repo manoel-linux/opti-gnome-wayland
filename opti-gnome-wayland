@@ -24,6 +24,11 @@ echo "#################################################################"
 exit 1
 fi
 
+sudo gsettings set org.gnome.desktop.interface enable-animations false
+sudo gsettings set org.gnome.desktop.background show-desktop-icons false
+sudo gsettings set org.gnome.desktop.thumbnailers disable-all true
+sudo gsettings set org.gnome.shell disable-user-extensions true
+
 gsettings set org.gnome.desktop.interface enable-animations false
 gsettings set org.gnome.desktop.background show-desktop-icons false
 gsettings set org.gnome.desktop.thumbnailers disable-all true
