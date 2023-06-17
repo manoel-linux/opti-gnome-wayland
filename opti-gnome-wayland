@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [[ "$XDG_SESSION_TYPE" != "wayland" ]]; then
+echo "This script can only be executed in a Wayland environment."
+exit 1
+fi
+
 clear
 echo "#################################################################"
 echo "opti-gnome-wayland-installer: june 2023"
