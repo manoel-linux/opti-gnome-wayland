@@ -24,7 +24,7 @@ echo " ██   ███ ██ ██  ██ ██    ██ ██ ██�
 echo " ██    ██ ██  ██ ██ ██    ██ ██  ██  ██ ██      "
 echo "  ██████  ██   ████  ██████  ██      ██ ███████ "                                                                                            
 echo "#################################################################"
-echo "build-latest: 0.0.3"
+echo "build-latest: 0.0.4"
 echo "opti-gnome-wayland-github: https://github.com/manoel-linux/opti-gnome-wayland"
 echo "#################################################################"
 echo "$(date)"
@@ -52,7 +52,8 @@ gsettings set org.gnome.shell disable-user-extensions true
 
 sudo sed -i 's/NoDisplay=true/NoDisplay=false/g' /etc/xdg/autostart/*.desktop
 
-directors="/etc/xdg/autostart/"
+system_autostart_dir="/etc/xdg/autostart/"
+user_autostart_dir="$HOME/.config/autostart/"
 
 keep_the_files=(
     "org.gnome.SettingsDaemon.XSettings.desktop"
@@ -74,17 +75,33 @@ keep_the_files=(
     "org.gnome.SettingsDaemon.Wwan.desktop"
 )
 
-for files in $directors*; do
-    if [[ ! " ${keep_the_files[@]} " =~ " ${files##*/} " ]]; then
-        sudo rm $files
+keep_the_files_home=(
+    "ignore-lid-switch-tweak.desktop"
+)
+
+for file in $system_autostart_dir*; do
+    if [[ ! " ${keep_the_files[@]} " =~ " ${file##*/} " ]]; then
+        sudo rm "$file"
     fi
 done
 
-echo "maintained file"
-echo "#################################################################"  
-for files in "${keep_the_files[@]}"
-do
-    echo "$files"
+for file in $user_autostart_dir*; do
+    if [[ ! " ${keep_the_files_home[@]} " =~ " ${file##*/} " ]]; then
+        rm "$file"
+    fi
+done
+
+echo "Maintained files in system autostart directory"
+echo "#################################################################"
+for file in "${keep_the_files[@]}"; do
+    echo "$file"
+done
+echo "#################################################################"
+
+echo "Maintained files in user autostart directory"
+echo "#################################################################"
+for file in "${keep_the_files_home[@]}"; do
+    echo "$file"
 done
 echo "#################################################################"  
 echo "DONE! Optimized GNOME"
