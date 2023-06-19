@@ -13,9 +13,6 @@ echo "  ██████  ██   ████  ██████  ██   
 echo "#################################################################"
 echo "opti-gnome-wayland-github: https://github.com/manoel-linux/opti-gnome-wayland"
 echo "#################################################################"
-echo "$(date)"
-echo "Linux $(uname -r)"
-echo "#################################################################"
 
 
 if [[ $EUID -ne 0 ]]; then
