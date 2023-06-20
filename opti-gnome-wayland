@@ -42,7 +42,6 @@ read -p "WARNING: This script is provided 'AS IS', without any warranties of any
 echo "#################################################################"
 if [[ "$third_confirm" == "y" || "$third_confirm" == "Y" ]]; then
 echo "Proceeding with the changes..."
-echo "#################################################################"
 else
 echo "Action canceled by the user."
 echo "#################################################################"
@@ -172,7 +171,7 @@ done
 
 for file in $user_autostart_dir*; do
     if [[ ! " ${keep_the_files_home[@]} " =~ " ${file##*/} " ]]; then
-        rm "$file"
+        sudo rm "$file"
     fi
 done
 
