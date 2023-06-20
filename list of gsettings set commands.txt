@@ -1,0 +1,97 @@
+--------------------------------------
+dconf-editor
+--------------------------------------
+/org/gnome/mutter/
+--------------------------------------
+attach-modal-dialogs false
+
+center-new-windows false
+
+edge-tiling false
+
+no-tab-popup false
+--------------------------------------
+/org/gnome/desktop/interface/
+--------------------------------------
+can-change-accels false
+
+clock-show-date false
+
+clock-show-seconds false
+
+clock-show-weekday false
+
+color-scheme 'prefer-dark'
+
+cursor-blink false
+
+enable-animations false
+
+enable-hot-corners false
+
+font-antialiasing 'none'
+
+font-hinting 'none'
+
+gtk-enable-primary-paste false
+
+locate-pointer false
+
+menubar-detachable false
+
+menus-have-tearoff false
+
+overlay-scrolling false
+
+show-battery-percentage false
+
+toolbar-detachable false
+
+toolkit-accessibility false
+--------------------------------------
+/org/gnome/desktop/notifications/
+--------------------------------------
+show-banners false
+
+show-in-lock-screen false
+--------------------------------------
+/org/gnome/desktop/sound/
+--------------------------------------
+allow-volume-above-100-percent true
+
+event-sounds false
+
+input-feedback-sounds false
+--------------------------------------
+/org/gnome/desktop/background/
+--------------------------------------
+show-desktop-icons false
+--------------------------------------
+/org/gnome/desktop/thumbnailers/
+--------------------------------------
+disable-all true
+--------------------------------------
+/org/gnome/shell/
+--------------------------------------
+always-show-log-out false
+
+disable-extension-version-validation false
+
+remember-mount-password false
+--------------------------------------
+/org/gnome/wm/preferences/
+--------------------------------------
+audible-bell false
+
+auto-raise false
+
+disable-workarounds false
+
+raise-on-click false
+
+resize-with-right-button false
+
+titlebar-uses-system-font false
+
+visual-bell false
+--------------------------------------
