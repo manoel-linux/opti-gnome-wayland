@@ -6,7 +6,7 @@
 
 - It only works on Wayland
 
-- opti-gnome-wayland: june 2023
+- opti-gnome-wayland-version: june 2023
 
 - build-latest: 0.1.0
 
