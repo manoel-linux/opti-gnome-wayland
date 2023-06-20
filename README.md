@@ -6,7 +6,7 @@
 
 - opti-gnome-wayland: june 2023
 
-- build-latest: 0.0.6
+- build-latest: 0.0.8
 
 - opti-gnome-wayland is an open-source project, and we are happy to share it with the community. You have complete freedom to do whatever you want with opti-gnome-wayland, in accordance with the terms of the MIT license. You can modify, distribute, use it in your own projects, or even create a fork of opti-gnome-wayland to add additional features.
 
@@ -48,7 +48,7 @@
 
 # Project Status
 
-- The opti-gnome-wayland project is currently in development. The latest stable version is 0.0.6. We aim to provide regular updates and add more features in the future.
+- The opti-gnome-wayland project is currently in development. The latest stable version is 0.0.8. We aim to provide regular updates and add more features in the future.
 
 # License
 
