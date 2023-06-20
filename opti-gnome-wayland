@@ -24,7 +24,7 @@ echo " ██   ███ ██ ██  ██ ██    ██ ██ ██�
 echo " ██    ██ ██  ██ ██ ██    ██ ██  ██  ██ ██      "
 echo "  ██████  ██   ████  ██████  ██      ██ ███████ "                                                                                            
 echo "#################################################################"
-echo "build-latest: 0.0.6"
+echo "build-latest: 0.0.7"
 echo "opti-gnome-wayland-github: https://github.com/manoel-linux/opti-gnome-wayland"
 echo "#################################################################"
 
@@ -35,58 +35,64 @@ echo "#################################################################"
 exit 1
 fi
 
-sudo gsettings set org.gnome.desktop.sound allow-volume-above-100-percent true
-sudo gsettings set org.gnome.desktop.notifications show-in-lock-screen false
+sudo gsettings set org.gnome.mutter attach-modal-dialogs false
+sudo gsettings set org.gnome.mutter center-new-windows false
+sudo gsettings set org.gnome.mutter edge-tiling false
+sudo gsettings set org.gnome.mutter no-tab-popup false
+sudo gsettings set org.gnome.desktop.interface can-change-accels false
+sudo gsettings set org.gnome.desktop.interface clock-show-date false
+sudo gsettings set org.gnome.desktop.interface clock-show-seconds false
+sudo gsettings set org.gnome.desktop.interface clock-show-weekday false
+sudo gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+sudo gsettings set org.gnome.desktop.interface cursor-blink false
+sudo gsettings set org.gnome.desktop.interface enable-animations false
+sudo gsettings set org.gnome.desktop.interface enable-hot-corners false
+sudo gsettings set org.gnome.desktop.interface font-antialiasing 'none'
+sudo gsettings set org.gnome.desktop.interface font-hinting 'none'
+sudo gsettings set org.gnome.desktop.interface gtk-enable-primary-paste false
 sudo gsettings set org.gnome.desktop.interface locate-pointer false
 sudo gsettings set org.gnome.desktop.interface menubar-detachable false
 sudo gsettings set org.gnome.desktop.interface menus-have-tearoff false
+sudo gsettings set org.gnome.desktop.interface overlay-scrolling false
 sudo gsettings set org.gnome.desktop.interface show-battery-percentage false
 sudo gsettings set org.gnome.desktop.interface toolbar-detachable false
 sudo gsettings set org.gnome.desktop.interface toolkit-accessibility false
-sudo gsettings set org.gnome.desktop.interface gtk-enable-primary-paste false
-sudo gsettings set org.gnome.desktop.sound input-feedback-sounds false
-sudo gsettings set org.gnome.desktop.sound event-sounds false
 sudo gsettings set org.gnome.desktop.notifications show-banners false
-sudo gsettings set org.gnome.desktop.interface cursor-blink false
-sudo gsettings set org.gnome.online-accounts whitelisted-providers ['none']
-sudo gsettings set org.gnome.desktop.interface font-antialiasing 'none'
-sudo gsettings set org.gnome.desktop.interface font-hinting 'none'
-sudo gsettings set org.gnome.desktop.interface clock-show-weekday false
-sudo gsettings set org.gnome.desktop.interface clock-show-seconds false
-sudo gsettings set org.gnome.desktop.interface clock-show-date false
-sudo gsettings set org.gnome.desktop.interface enable-hot-corners false
-sudo gsettings set org.gnome.desktop.interface overlay-scrolling false
-sudo gsettings set org.gnome.desktop.interface color-scheme prefer-dark
-sudo gsettings set org.gnome.desktop.interface enable-animations false
-sudo gsettings set org.gnome.desktop.interface can-change-accels false
+sudo gsettings set org.gnome.desktop.notifications show-in-lock-screen false
+sudo gsettings set org.gnome.desktop.sound allow-volume-above-100-percent true
+sudo gsettings set org.gnome.desktop.sound event-sounds false
+sudo gsettings set org.gnome.desktop.sound input-feedback-sounds false
 sudo gsettings set org.gnome.desktop.background show-desktop-icons false
 sudo gsettings set org.gnome.desktop.thumbnailers disable-all true
 sudo gsettings set org.gnome.shell disable-user-extensions true
 
-gsettings set org.gnome.desktop.sound allow-volume-above-100-percent true
-gsettings set org.gnome.desktop.notifications show-in-lock-screen false
+gsettings set org.gnome.mutter attach-modal-dialogs false
+gsettings set org.gnome.mutter center-new-windows false
+gsettings set org.gnome.mutter edge-tiling false
+gsettings set org.gnome.mutter no-tab-popup false
+gsettings set org.gnome.desktop.interface can-change-accels false
+gsettings set org.gnome.desktop.interface clock-show-date false
+gsettings set org.gnome.desktop.interface clock-show-seconds false
+gsettings set org.gnome.desktop.interface clock-show-weekday false
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+gsettings set org.gnome.desktop.interface cursor-blink false
+gsettings set org.gnome.desktop.interface enable-animations false
+gsettings set org.gnome.desktop.interface enable-hot-corners false
+gsettings set org.gnome.desktop.interface font-antialiasing 'none'
+gsettings set org.gnome.desktop.interface font-hinting 'none'
+gsettings set org.gnome.desktop.interface gtk-enable-primary-paste false
 gsettings set org.gnome.desktop.interface locate-pointer false
 gsettings set org.gnome.desktop.interface menubar-detachable false
 gsettings set org.gnome.desktop.interface menus-have-tearoff false
+gsettings set org.gnome.desktop.interface overlay-scrolling false
 gsettings set org.gnome.desktop.interface show-battery-percentage false
 gsettings set org.gnome.desktop.interface toolbar-detachable false
 gsettings set org.gnome.desktop.interface toolkit-accessibility false
-gsettings set org.gnome.desktop.interface gtk-enable-primary-paste false
-gsettings set org.gnome.desktop.sound input-feedback-sounds false
-gsettings set org.gnome.desktop.sound event-sounds false
 gsettings set org.gnome.desktop.notifications show-banners false
-gsettings set org.gnome.desktop.interface cursor-blink false
-gsettings set org.gnome.online-accounts whitelisted-providers ['none']
-gsettings set org.gnome.desktop.interface font-antialiasing 'none'
-gsettings set org.gnome.desktop.interface font-hinting 'none'
-gsettings set org.gnome.desktop.interface clock-show-weekday false
-gsettings set org.gnome.desktop.interface clock-show-seconds false
-gsettings set org.gnome.desktop.interface clock-show-date false
-gsettings set org.gnome.desktop.interface enable-hot-corners false
-gsettings set org.gnome.desktop.interface overlay-scrolling false
-gsettings set org.gnome.desktop.interface color-scheme prefer-dark
-gsettings set org.gnome.desktop.interface enable-animations false
-gsettings set org.gnome.desktop.interface can-change-accels false
+gsettings set org.gnome.desktop.notifications show-in-lock-screen false
+gsettings set org.gnome.desktop.sound allow-volume-above-100-percent true
+gsettings set org.gnome.desktop.sound event-sounds false
+gsettings set org.gnome.desktop.sound input-feedback-sounds false
 gsettings set org.gnome.desktop.background show-desktop-icons false
 gsettings set org.gnome.desktop.thumbnailers disable-all true
 gsettings set org.gnome.shell disable-user-extensions true
