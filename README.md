@@ -2,6 +2,8 @@
 
 - Use at your own risk
 
+- It can only be executed without superuser and sudo
+
 - It only works on Wayland
 
 - opti-gnome-wayland: june 2023
