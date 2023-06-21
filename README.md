@@ -6,6 +6,8 @@
 
 - It only works on Wayland
 
+- Support for the distro: Void Linux Ubuntu/Debian Arch/Artix/Manjaro
+
 - opti-gnome-wayland-version: june 2023
 
 - build-latest: 0.1.1
