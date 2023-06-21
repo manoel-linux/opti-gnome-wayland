@@ -15,7 +15,13 @@ echo "#################################################################"
 
 
 if [[ $EUID -ne 0 ]]; then
-echo "ERROR! Superuser privileges or sudo required to execute the script." 
+echo " ███████ ██████  ██████   ██████  ██████  ██ "
+echo " ██      ██   ██ ██   ██ ██    ██ ██   ██ ██ "
+echo " █████   ██████  ██████  ██    ██ ██████  ██ "
+echo " ██      ██   ██ ██   ██ ██    ██ ██   ██    "
+echo " ███████ ██   ██ ██   ██  ██████  ██   ██ ██ "                                                                                        
+echo "#################################################################"
+echo "Superuser privileges or sudo required to execute the script." 
 echo "#################################################################"
 exit 1
 fi
