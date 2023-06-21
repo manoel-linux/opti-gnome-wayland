@@ -20,11 +20,11 @@ echo "#################################################################"
 exit 1
 fi
 
-rm /usr/bin/opti-gnome-wayland
+sudo rm /usr/bin/opti-gnome-wayland
 
-cp opti-gnome-wayland /usr/bin/
+sudo cp opti-gnome-wayland /usr/bin/
 
-chmod +x /usr/bin/opti-gnome-wayland
+sudo chmod +x /usr/bin/opti-gnome-wayland
 
 echo "DONE! Installation/Update completed."
 echo "#################################################################"
