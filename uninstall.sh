@@ -21,7 +21,7 @@ echo "#################################################################"
 exit 1
 fi
 
-rm /usr/bin/opti-gnome-wayland
+sudo rm /usr/bin/opti-gnome-wayland
 
 echo "DONE! Uninstallation completed."
 echo "#################################################################"
