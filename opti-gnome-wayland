@@ -187,8 +187,13 @@ echo "#################################################################"
 for file in "${keep_the_files_home[@]}"; do
     echo "$file"
 done
+echo " ██████   ██████  ███    ██ ███████ ██ "
+echo " ██   ██ ██    ██ ████   ██ ██      ██ "
+echo " ██   ██ ██    ██ ██ ██  ██ █████   ██ "
+echo " ██   ██ ██    ██ ██  ██ ██ ██         "
+echo " ██████   ██████  ██   ████ ███████ ██ "  
 echo "#################################################################"  
-echo "DONE! Optimized GNOME"
+echo "Optimized GNOME"
 echo "#################################################################"  
 read -p "To apply the changes, you need to restart system. (y/n): " confirm
                 
