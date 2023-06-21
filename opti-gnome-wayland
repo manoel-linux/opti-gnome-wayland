@@ -29,6 +29,12 @@ echo "opti-gnome-wayland-github: https://github.com/manoel-linux/opti-gnome-wayl
 echo "#################################################################"
 
 if [[ $EUID -eq 0 ]]; then
+echo " ███████ ██████  ██████   ██████  ██████  ██ "
+echo " ██      ██   ██ ██   ██ ██    ██ ██   ██ ██ "
+echo " █████   ██████  ██████  ██    ██ ██████  ██ "
+echo " ██      ██   ██ ██   ██ ██    ██ ██   ██    "
+echo " ███████ ██   ██ ██   ██  ██████  ██   ██ ██ "                                                                                        
+echo "#################################################################"
 echo "This script should not be executed as a superuser or sudo."
 echo "Please run it without superuser privileges or sudo."
 echo "#################################################################"
