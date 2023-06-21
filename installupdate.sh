@@ -26,7 +26,13 @@ sudo cp opti-gnome-wayland /usr/bin/
 
 sudo chmod +x /usr/bin/opti-gnome-wayland
 
-echo "DONE! Installation/Update completed."
+echo " ██████   ██████  ███    ██ ███████ ██ "
+echo " ██   ██ ██    ██ ████   ██ ██      ██ "
+echo " ██   ██ ██    ██ ██ ██  ██ █████   ██ "
+echo " ██   ██ ██    ██ ██  ██ ██ ██         "
+echo " ██████   ██████  ██   ████ ███████ ██ "  
+echo "#################################################################"
+echo "Installation/Update completed."
 echo "#################################################################"
 echo "To use opti-gnome-wayland, execute the following command: opti-gnome-wayland"
 echo "#################################################################"
