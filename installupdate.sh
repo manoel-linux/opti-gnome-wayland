@@ -30,6 +30,17 @@ echo "#################################################################"
 exit 1
 fi
 
+web="fsf.org"
+
+if ! ping -q -c 1 -W 1 "$web" >/dev/null; then
+echo "#################################################################"
+echo "No internet connection. The script will not be executed."
+echo "#################################################################"
+exit 1
+fi
+
+echo "Connected to the internet. Running the script..."
+echo "#################################################################"
 echo "(1)> (Install) the opti-gnome-wayland version of Void-Linux"
 echo "(2)> (Install) the opti-gnome-wayland version of Ubuntu/Debian"
 echo "(3)> (Install) the opti-gnome-wayland version of Arch-Artix-Manjaro"
@@ -64,12 +75,17 @@ done
 show_void-linux() {
 while true; do
 clear
+if [ ! -x /bin/xbps-install ]; then
 echo "#################################################################"
+echo "(Warning!) >> You are trying to run a version meant for another distribution. 
+To prevent issues, the script has blocked a warning to execute the version meant for your distribution."
+echo "#################################################################"
+exit 1
+fi
 echo "Checking for updates in Void Linux..." 
 echo "#################################################################"
-sudo xbps-install inetutils-ping -y
-if ping -q -c 1 -W 1 voidlinux.org >/dev/null; then
-echo "Internet connection established. It is possible to check for updates."
+sudo xbps-install inetutils-ping glxinfo unzip binutils tar curl xbps xz lm_sensors dialog hdparm -y
+clear
 echo "#################################################################"
 
 read -p "Do you want to update your system? (y/n): " choice
@@ -79,18 +95,16 @@ sudo xbps-install -Syu -y
 else
 echo "Skipping system update."
 echo "#################################################################"
-sudo xbps-install glxinfo unzip binutils tar curl xbps xz lm_sensors dialog xhost -y
 fi
-else
-echo "#################################################################"
-echo "No internet connection. Unable to check for updates Skipping."
-fi
+
+clear
+
 sudo rm /usr/bin/opti-gnome-wayland
 
 sudo cp opti-gnome-wayland /usr/bin/
 
 sudo chmod +x /usr/bin/opti-gnome-wayland
-
+echo "#################################################################"
 echo " ██████   ██████  ███    ██ ███████ ██ "
 echo " ██   ██ ██    ██ ████   ██ ██      ██ "
 echo " ██   ██ ██    ██ ██ ██  ██ █████   ██ "
@@ -116,34 +130,38 @@ echo "#################################################################"
 show_ubuntu-debian() {
 while true; do
 clear
+if [ ! -x /bin/apt ]; then
+echo "#################################################################"
+echo "(Warning!) >> You are trying to run a version meant for another distribution. 
+To prevent issues, the script has blocked a warning to execute the version meant for your distribution."
+echo "#################################################################"
+exit 1
+fi
 echo "#################################################################"
 echo "Checking for updates in Ubuntu/Debian..." 
 echo "#################################################################"
-sudo apt install inetutils-ping -y
-if ping -q -c 1 -W 1 debian.org >/dev/null; then
-echo "Internet connection established. It is possible to check for updates."
+sudo apt-get install --no-install-recommends inetutils-ping mesa-utils unzip binutils tar curl xz-utils usbutils grep gawk sed lm-sensors dialog hdparm -y
+clear
 echo "#################################################################"
 
 read -p "Do you want to update your system? (y/n): " choice
 echo "#################################################################"
 if [[ $choice == "y" || $choice == "Y" ]]; then
-sudo apt update -y
-sudo apt upgrade -y
+sudo apt-get update -y
+sudo apt-get upgrade -y
 else
 echo "Skipping system update."
 echo "#################################################################"
-sudo apt install mesa-utils unzip binutils tar curl xz-utils usbutils grep gawk sed lm-sensors dialog -y
 fi
-else
-echo "#################################################################"
-echo "No internet connection. Unable to check for updates Skipping."
-fi
+
+clear
+
 sudo rm /usr/bin/opti-gnome-wayland
 
 sudo cp opti-gnome-wayland /usr/bin/
 
 sudo chmod +x /usr/bin/opti-gnome-wayland
-
+echo "#################################################################"
 echo " ██████   ██████  ███    ██ ███████ ██ "
 echo " ██   ██ ██    ██ ████   ██ ██      ██ "
 echo " ██   ██ ██    ██ ██ ██  ██ █████   ██ "
@@ -168,13 +186,18 @@ echo "#################################################################"
 
 show_arch-artix-manjaro() {
 while true; do
-clear
+if [ ! -x /bin/pacman ]; then
+echo "#################################################################"
+echo "(Warning!) >> You are trying to run a version meant for another distribution. 
+To prevent issues, the script has blocked a warning to execute the version meant for your distribution."
+echo "#################################################################"
+exit 1
+fi
 echo "#################################################################"
 echo "Checking for updates in Arch/Artix/Manjaro..." 
 echo "#################################################################"
-sudo pacman -S iputils -y
-if ping -q -c 1 -W 1 archlinux.org >/dev/null; then
-echo "Internet connection established. It is possible to check for updates."
+sudo pacman -S iputils mesa-utils glxinfo mesa-demos glxinfo unzip binutils tar curl xz usbutils grep gawk sed lm_sensors dialog hdparm -y
+clear
 echo "#################################################################"
 
 read -p "Do you want to update your system? (y/n): " choice
@@ -184,18 +207,16 @@ sudo pacman -Syu -y
 else
 echo "Skipping system update."
 echo "#################################################################"
-sudo pacman -S mesa-utils glxinfo mesa-demos glxinfo unzip binutils tar curl xz usbutils grep gawk sed lm_sensors dialog -y
 fi
-else
-echo "#################################################################"
-echo "No internet connection. Unable to check for updates Skipping."
-fi
+
+clear
+
 sudo rm /usr/bin/opti-gnome-wayland
 
 sudo cp opti-gnome-wayland /usr/bin/
 
 sudo chmod +x /usr/bin/opti-gnome-wayland
-
+echo "#################################################################"
 echo " ██████   ██████  ███    ██ ███████ ██ "
 echo " ██   ██ ██    ██ ████   ██ ██      ██ "
 echo " ██   ██ ██    ██ ██ ██  ██ █████   ██ "
