@@ -84,7 +84,7 @@ exit 1
 fi
 echo "Checking for updates in Void Linux..." 
 echo "#################################################################"
-sudo xbps-install inetutils-ping glxinfo unzip binutils tar curl xbps xz lm_sensors dialog hdparm -y
+sudo xbps-install inetutils-ping unzip binutils tar curl xbps xz -y
 clear
 echo "#################################################################"
 
@@ -140,7 +140,7 @@ fi
 echo "#################################################################"
 echo "Checking for updates in Ubuntu/Debian..." 
 echo "#################################################################"
-sudo apt-get install --no-install-recommends inetutils-ping mesa-utils unzip binutils tar curl xz-utils usbutils grep gawk sed lm-sensors dialog hdparm -y
+sudo apt-get install --no-install-recommends inetutils-ping unzip binutils tar curl xz-utils grep gawk sed -y
 clear
 echo "#################################################################"
 
@@ -196,7 +196,7 @@ fi
 echo "#################################################################"
 echo "Checking for updates in Arch/Artix/Manjaro..." 
 echo "#################################################################"
-sudo pacman -S iputils mesa-utils glxinfo mesa-demos glxinfo unzip binutils tar curl xz usbutils grep gawk sed lm_sensors dialog hdparm -y
+sudo pacman -S iputils unzip binutils tar curl xz grep gawk sed -y
 clear
 echo "#################################################################"
 
