@@ -6,7 +6,7 @@ show_main_menu() {
 while true; do
 clear
 echo "#################################################################"
-echo "opti-gnome-wayland-installer: june 2023"
+echo "opti-gnome-wayland-installer: july 2023"
 echo "#################################################################"
 echo "  ██████  ███    ██  ██████  ███    ███ ███████ "
 echo " ██       ████   ██ ██    ██ ████  ████ ██      "
