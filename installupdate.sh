@@ -39,6 +39,16 @@ echo "#################################################################"
 exit 1
 fi
 
+sudo pacman -S iputils -y
+echo "#################################################################"
+sudo xbps-install inetutils-ping -y
+echo "#################################################################"
+sudo apt-get install --no-install-recommends inetutils-ping -y
+echo "#################################################################"
+
+clear
+
+echo "#################################################################"
 echo "Connected to the internet. Running the script..."
 echo "#################################################################"
 echo "(1)> (Install) the opti-gnome-wayland version of Void-Linux"
@@ -84,7 +94,7 @@ exit 1
 fi
 echo "Checking for updates in Void Linux..." 
 echo "#################################################################"
-sudo xbps-install inetutils-ping unzip binutils tar curl xbps xz -y
+sudo xbps-install unzip binutils tar curl xbps xz -y
 clear
 echo "#################################################################"
 
@@ -140,7 +150,7 @@ fi
 echo "#################################################################"
 echo "Checking for updates in Ubuntu/Debian..." 
 echo "#################################################################"
-sudo apt-get install --no-install-recommends inetutils-ping unzip binutils tar curl xz-utils grep gawk sed -y
+sudo apt-get install --no-install-recommends unzip binutils tar curl xz-utils grep gawk sed -y
 clear
 echo "#################################################################"
 
@@ -196,7 +206,7 @@ fi
 echo "#################################################################"
 echo "Checking for updates in Arch/Artix/Manjaro..." 
 echo "#################################################################"
-sudo pacman -S iputils unzip binutils tar curl xz grep gawk sed -y
+sudo pacman -S unzip binutils tar curl xz grep gawk sed -y
 clear
 echo "#################################################################"
 
