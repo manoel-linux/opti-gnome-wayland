@@ -8,7 +8,7 @@
 
 - Support for the distro: Void Linux Ubuntu/Debian Arch/Artix/Manjaro
 
-- opti-gnome-wayland-version: june 2023
+- opti-gnome-wayland-version: july 2023
 
 - build-latest: 0.1.1
 
