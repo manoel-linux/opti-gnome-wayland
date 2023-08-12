@@ -1,11 +1,5 @@
 # opti-gnome-wayland
 
-- Use at your own risk
-
-- It can only be executed without superuser and sudo
-
-- It only works on Wayland
-
 - opti-gnome-wayland-version: july 2023
 
 - build-latest: 0.1.1
@@ -13,6 +7,12 @@
 - Support for the distro: Void-Linux/Ubuntu/Debian/Arch/Artix/Manjaro
 
 - If you are using a distribution based on Ubuntu, Debian, or Arch, the script will work without any issues.
+
+- Use at your own risk
+
+- It can only be executed without superuser and sudo
+
+- It only works on Wayland
 
 - opti-gnome-wayland is an open-source project, and we are happy to share it with the community. You have complete freedom to do whatever you want with opti-gnome-wayland, in accordance with the terms of the MIT license. You can modify, distribute, use it in your own projects, or even create a fork of opti-gnome-wayland to add additional features.
 
