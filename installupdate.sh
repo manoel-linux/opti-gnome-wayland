@@ -105,9 +105,14 @@ clear
 
 sudo rm /usr/bin/opti-gnome-wayland
 
+clear
+
 sudo cp opti-gnome-wayland /usr/bin/
 
 sudo chmod +x /usr/bin/opti-gnome-wayland
+
+clear
+
 echo "#################################################################"
 echo " ██████   ██████  ███    ██ ███████ ██ "
 echo " ██   ██ ██    ██ ████   ██ ██      ██ "
@@ -163,9 +168,14 @@ clear
 
 sudo rm /usr/bin/opti-gnome-wayland
 
+clear
+
 sudo cp opti-gnome-wayland /usr/bin/
 
 sudo chmod +x /usr/bin/opti-gnome-wayland
+
+clear
+
 echo "#################################################################"
 echo " ██████   ██████  ███    ██ ███████ ██ "
 echo " ██   ██ ██    ██ ████   ██ ██      ██ "
@@ -220,9 +230,14 @@ clear
 
 sudo rm /usr/bin/opti-gnome-wayland
 
+clear
+
 sudo cp opti-gnome-wayland /usr/bin/
 
 sudo chmod +x /usr/bin/opti-gnome-wayland
+
+clear
+
 echo "#################################################################"
 echo " ██████   ██████  ███    ██ ███████ ██ "
 echo " ██   ██ ██    ██ ████   ██ ██      ██ "
