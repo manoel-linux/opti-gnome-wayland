@@ -30,8 +30,6 @@
 
 - sudo `./installupdate.sh`
 
-- When installing opti-gnome-wayland for the first time, you may encounter an error "`rm /usr/bin/opti-gnome-wayland`" if the file doesn't exist. This removal command is part of - - the update process, but during the initial installation, the opti-gnome-wayland file is not yet present in the `/usr/bin/` directory. Therefore, you can safely ignore -- this error as it will not affect the installation of opti-gnome-wayland. The script will proceed to copy the opti-gnome-wayland file to the `/usr/bin/` directory and set the ----- correct permissions.
-
 # 3. Execute the opti-gnome-wayland script
 
 - `opti-gnome-wayland`
