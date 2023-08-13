@@ -6,7 +6,7 @@ show_main_menu() {
 while true; do
 clear
 echo "#################################################################"
-echo "opti-gnome-wayland-installer: july 2023"
+echo "opti-gnome-wayland-installer: aug 2023"
 echo "#################################################################"
 echo "  ██████  ███    ██  ██████  ███    ███ ███████ "
 echo " ██       ████   ██ ██    ██ ████  ████ ██      "
@@ -30,26 +30,18 @@ echo "#################################################################"
 exit 1
 fi
 
-web="fsf.org"
-
-if ! ping -q -c 1 -W 1 "$web" >/dev/null; then
-echo "#################################################################"
-echo "No internet connection. The script will not be executed."
-echo "#################################################################"
-exit 1
-fi
-
+sudo pacman -Sy
 sudo pacman -S iputils -y
 echo "#################################################################"
-sudo xbps-install inetutils-ping -y
+sudo xbps-install -Sy
+sudo xbps-install -S inetutils-ping -y
 echo "#################################################################"
+sudo apt-get update
 sudo apt-get install --no-install-recommends inetutils-ping -y
 echo "#################################################################"
 
 clear
 
-echo "#################################################################"
-echo "Connected to the internet. Running the script..."
 echo "#################################################################"
 echo "(1)> (Install) the opti-gnome-wayland version of Void-Linux"
 echo "(2)> (Install) the opti-gnome-wayland version of Ubuntu/Debian"
@@ -94,13 +86,15 @@ exit 1
 fi
 echo "Checking for updates in Void Linux..." 
 echo "#################################################################"
-sudo xbps-install unzip binutils tar curl xbps xz -y
+sudo xbps-install -Sy
+sudo xbps-install -S unzip binutils tar curl xbps xz grep gawk sed -y
 clear
 echo "#################################################################"
 
 read -p "Do you want to update your system? (y/n): " choice
 echo "#################################################################"
 if [[ $choice == "y" || $choice == "Y" ]]; then
+sudo xbps-install -Sy
 sudo xbps-install -Syu -y
 else
 echo "Skipping system update."
@@ -150,6 +144,7 @@ fi
 echo "#################################################################"
 echo "Checking for updates in Ubuntu/Debian..." 
 echo "#################################################################"
+sudo apt-get update
 sudo apt-get install --no-install-recommends unzip binutils tar curl xz-utils grep gawk sed -y
 clear
 echo "#################################################################"
@@ -157,7 +152,7 @@ echo "#################################################################"
 read -p "Do you want to update your system? (y/n): " choice
 echo "#################################################################"
 if [[ $choice == "y" || $choice == "Y" ]]; then
-sudo apt-get update -y
+sudo apt-get update
 sudo apt-get upgrade -y
 else
 echo "Skipping system update."
@@ -206,6 +201,7 @@ fi
 echo "#################################################################"
 echo "Checking for updates in Arch/Artix/Manjaro..." 
 echo "#################################################################"
+sudo pacman -Sy
 sudo pacman -S unzip binutils tar curl xz grep gawk sed -y
 clear
 echo "#################################################################"
@@ -213,6 +209,7 @@ echo "#################################################################"
 read -p "Do you want to update your system? (y/n): " choice
 echo "#################################################################"
 if [[ $choice == "y" || $choice == "Y" ]]; then
+sudo pacman -Sy
 sudo pacman -Syu -y
 else
 echo "Skipping system update."
