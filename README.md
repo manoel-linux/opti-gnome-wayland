@@ -2,7 +2,7 @@
 
 - opti-gnome-wayland-version: july 2023
 
-- build-latest: 0.1.1
+- build-latest: 0.1.2
 
 - Support for the distro: Void-Linux/Ubuntu/Debian/Arch/Artix/Manjaro
 
@@ -58,7 +58,7 @@
 
 # Project Status
 
-- The opti-gnome-wayland project is currently in development. The latest stable version is 0.1.1. We aim to provide regular updates and add more features in the future.
+- The opti-gnome-wayland project is currently in development. The latest stable version is 0.1.2. We aim to provide regular updates and add more features in the future.
 
 # License
 
