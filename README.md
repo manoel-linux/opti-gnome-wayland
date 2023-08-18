@@ -1,6 +1,6 @@
 # opti-gnome-wayland
 
-- opti-gnome-wayland-version: july 2023
+- opti-gnome-wayland-version: aug 2023
 
 - build-latest: 0.1.2
 
