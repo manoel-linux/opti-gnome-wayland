@@ -6,17 +6,16 @@ show_main_menu() {
 while true; do
 clear
 echo "#################################################################"
-echo "opti-gnome-wayland-installer: aug 2023"
+echo "opti-gnome-wayland-installer >> (aug 2023)"
 echo "#################################################################"
 echo "  ██████  ███    ██  ██████  ███    ███ ███████ "
 echo " ██       ████   ██ ██    ██ ████  ████ ██      "
 echo " ██   ███ ██ ██  ██ ██    ██ ██ ████ ██ █████   "
 echo " ██    ██ ██  ██ ██ ██    ██ ██  ██  ██ ██      "
-echo "  ██████  ██   ████  ██████  ██      ██ ███████ "                                                                                            
+echo "  ██████  ██   ████  ██████  ██      ██ ███████ "  
 echo "#################################################################"
-echo "opti-gnome-wayland-github: https://github.com/manoel-linux/opti-gnome-wayland"
+echo "opti-gnome-wayland-github >> (https://github.com/manoel-linux/opti-gnome-wayland)"
 echo "#################################################################"
-
 
 if [[ $EUID -ne 0 ]]; then
 echo " ███████ ██████  ██████   ██████  ██████  ██ "
