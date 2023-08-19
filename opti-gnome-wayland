@@ -16,16 +16,16 @@ fi
 
 clear
 echo "#################################################################"
-echo "opti-gnome-wayland-version: aug 2023"
+echo "opti-gnome-wayland-version >> (aug 2023)"
 echo "#################################################################"
 echo "  ██████  ███    ██  ██████  ███    ███ ███████ "
 echo " ██       ████   ██ ██    ██ ████  ████ ██      "
 echo " ██   ███ ██ ██  ██ ██    ██ ██ ████ ██ █████   "
 echo " ██    ██ ██  ██ ██ ██    ██ ██  ██  ██ ██      "
-echo "  ██████  ██   ████  ██████  ██      ██ ███████ "                                                                                            
+echo "  ██████  ██   ████  ██████  ██      ██ ███████ "  
 echo "#################################################################"
-echo "build-latest: 0.1.2"
-echo "opti-gnome-wayland-github: https://github.com/manoel-linux/opti-gnome-wayland"
+echo "build-latest >> (0.1.2)"
+echo "opti-gnome-wayland-github >> (https://github.com/manoel-linux/opti-gnome-wayland)"
 echo "#################################################################"
 
 if [[ $EUID -eq 0 ]]; then
