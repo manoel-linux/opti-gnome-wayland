@@ -1,19 +1,17 @@
 #!/bin/bash
 
-
 clear
 echo "#################################################################"
-echo "opti-gnome-wayland-uninstaller: july 2023"
+echo "opti-gnome-wayland-uninstaller >> (aug 2023)"
 echo "#################################################################"
 echo "  ██████  ███    ██  ██████  ███    ███ ███████ "
 echo " ██       ████   ██ ██    ██ ████  ████ ██      "
 echo " ██   ███ ██ ██  ██ ██    ██ ██ ████ ██ █████   "
 echo " ██    ██ ██  ██ ██ ██    ██ ██  ██  ██ ██      "
-echo "  ██████  ██   ████  ██████  ██      ██ ███████ "                                                                                            
+echo "  ██████  ██   ████  ██████  ██      ██ ███████ "  
 echo "#################################################################"
-echo "opti-gnome-wayland-github: https://github.com/manoel-linux/opti-gnome-wayland"
+echo "opti-gnome-wayland-github >> (https://github.com/manoel-linux/opti-gnome-wayland)"
 echo "#################################################################"
-
 
 if [[ $EUID -ne 0 ]]; then
 echo " ███████ ██████  ██████   ██████  ██████  ██ "
