@@ -43,9 +43,9 @@ clear
 
 
 echo "#################################################################"
-echo "(1)> (Install) the opti-gnome-wayland version of Void-Linux"
-echo "(2)> (Install) the opti-gnome-wayland version of Ubuntu/Debian"
-echo "(3)> (Install) the opti-gnome-wayland version of Arch-Artix-Manjaro"
+echo "(1)> (Install)  >> (the opti-gnome-wayland version of Void-Linux)"
+echo "(2)> (Install)  >> (the opti-gnome-wayland version of Ubuntu/Debian)"
+echo "(3)> (Install)  >> (the opti-gnome-wayland version of Arch-Artix-Manjaro)"
 echo "(4)> (Exit)"
 echo "#################################################################"
 
@@ -120,11 +120,11 @@ echo " ██   ██ ██    ██ ██ ██  ██ █████   
 echo " ██   ██ ██    ██ ██  ██ ██ ██         "
 echo " ██████   ██████  ██   ████ ███████ ██ "  
 echo "#################################################################"
-echo "Installation/Update completed."
+echo "(Installation/Update completed)"
 echo "#################################################################"
 echo "(To use opti-gnome-wayland, execute the following command >> opti-gnome-wayland)"
 echo "#################################################################"
-read -rsn1 -p "press Enter to return to the main menu
+read -rsn1 -p "(press Enter to return to the main menu)
 #################################################################" key
 if [[ $key == "r" || $key == "R" ]]; then
 continue
@@ -183,11 +183,11 @@ echo " ██   ██ ██    ██ ██ ██  ██ █████   
 echo " ██   ██ ██    ██ ██  ██ ██ ██         "
 echo " ██████   ██████  ██   ████ ███████ ██ "  
 echo "#################################################################"
-echo "Installation/Update completed."
+echo "(Installation/Update completed)"
 echo "#################################################################"
 echo "(To use opti-gnome-wayland, execute the following command >> opti-gnome-wayland)"
 echo "#################################################################"
-read -rsn1 -p "press Enter to return to the main menu
+read -rsn1 -p "(press Enter to return to the main menu)
 #################################################################" key
 if [[ $key == "r" || $key == "R" ]]; then
 continue
@@ -246,11 +246,11 @@ echo " ██   ██ ██    ██ ██ ██  ██ █████   
 echo " ██   ██ ██    ██ ██  ██ ██ ██         "
 echo " ██████   ██████  ██   ████ ███████ ██ "  
 echo "#################################################################"
-echo "Installation/Update completed."
+echo "(Installation/Update completed)"
 echo "#################################################################"
 echo "(To use opti-gnome-wayland, execute the following command >> opti-gnome-wayland)"
 echo "#################################################################"
-read -rsn1 -p "press Enter to return to the main menu
+read -rsn1 -p "(press Enter to return to the main menu)
 #################################################################" key
 if [[ $key == "r" || $key == "R" ]]; then
 continue
